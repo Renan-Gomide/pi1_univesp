@@ -1,5 +1,5 @@
 # 🍽️ Sistema Web de Gestão de Estoque para Restaurantes  
-**Repositório do Projeto Integrador 1 — Univesp — Curso Ciência de Dados — Turma 2023**
+**Repositório do Projeto Integrador 1 — Univesp — Turma 2023**
 
 ---
 
@@ -34,7 +34,7 @@ O sistema é dividido em três camadas principais:
 
 ### 🔹 Frontend
 - HTML5, CSS3, JavaScript
-- [Framework -------]
+- [Framework Tabler (Bootstrap 5)]
 
 ### 🔹 Backend
 - [Linguagem: Php]
