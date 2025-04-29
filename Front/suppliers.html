@@ -170,8 +170,9 @@
                             <table class="table table-vcenter card-table table-striped">
                                 <thead>
                                     <tr>
-                                        <th>Id</th>
+                                        <th>Id Fornecedor</th>
                                         <th>Nome</th>
+                                        <th>CNPJ</th>
                                         <th>Contato</th>
                                         <th>Categoria</th>
                                         <th>Cadastrado em</th>
@@ -181,10 +182,11 @@
                                 <tbody>
                                     <!-- Fornecedor 1 -->
                                     <tr>
-                                        <td><span class="text-muted">01</span></td>
-                                        <td>Frigorífico Brasil</td>
+                                        <td><span class="text-muted">F01</span></td>
+                                        <td>Frigorífico Brasil LTDA</td>
+                                        <td>00.000.000/0000-00</td>
                                         <td>(XX) XXXX-XXXX</td>
-                                        <td>Carnes Bovinas</td>
+                                        <td>Carnes</td>
                                         <td><span class="text-muted">15 de Janeiro de 2025, 09:30</span></td>
                                         <td class="table-actions">
                                             <a href="#" class="btn btn-icon btn-outline-primary"
@@ -202,11 +204,34 @@
     
                                     <!-- Fornecedor 2 -->
                                     <tr>
-                                        <td><span class="text-muted">02</span></td>
-                                        <td>Distribuidora Aves Brasil</td>
+                                        <td><span class="text-muted">F02</span></td>
+                                        <td>Distribuidora Aves Brasil LTDA</td>
+                                        <td>00.000.000/0000-00</td>
                                         <td>(XX) XXXX-XXXX</td>
-                                        <td>Aves</td>
+                                        <td>Carnes</td>
                                         <td><span class="text-muted">22 de Março de 2025, 11:45</span></td>
+                                        <td class="table-actions">
+                                            <a href="#" class="btn btn-icon btn-outline-primary"
+                                                data-bs-toggle="tooltip" title="Editar fornecedor">
+                                                <!-- Edit Icon -->
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-edit"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" /><path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" /><path d="M16 5l3 3" /></svg>
+                                            </a>
+                                            <a href="#" class="btn btn-icon btn-outline-danger ms-1"
+                                                data-bs-toggle="tooltip" title="Excluir fornecedor">
+                                                <!-- Trash Icon -->
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-trash"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 7l16 0" /><path d="M10 11l0 6" /><path d="M14 11l0 6" /><path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" /><path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" /></svg>
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Fornecedor 3 -->
+                                    <tr>
+                                        <td><span class="text-muted">F03</span></td>
+                                        <td>Real Distriuidora de Massas LTDA</td>
+                                        <td>00.000.000/0000-00</td>
+                                        <td>(XX) XXXX-XXXX</td>
+                                        <td>Massas</td>
+                                        <td><span class="text-muted">15 de Março de 2025, 08:39</span></td>
                                         <td class="table-actions">
                                             <a href="#" class="btn btn-icon btn-outline-primary"
                                                 data-bs-toggle="tooltip" title="Editar fornecedor">
@@ -274,27 +299,47 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                     </div>
                     <div class="modal-body">
-                        <div class="mb-3">
-                            <label class="form-label">Nome</label>
-                            <input type="text" class="form-control" name="supplier-name" placeholder="Nome do fornecedor">
-                        </div>
                         <div class="row">
                             <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Nome</label>
+                                    <input type="text" class="form-control" name="supplier-name" placeholder="Nome do fornecedor">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="mb-3">
+                                    <label class="form-label">CNPJ</label>
+                                    <input type="text" class="form-control" name="supplier-cnpj" placeholder="CNPJ">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-4">
                                 <div class="mb-3">
                                     <label class="form-label">Contato</label>
                                     <input type="text" class="form-control" name="supplier-phone" placeholder="(00) 00000-0000">
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-4">
                                 <div class="mb-3">
                                     <label class="form-label">Categoria</label>
                                     <select class="form-select" name="supplier-category">
-                                        <option value="1">Carnes Bovinas</option>
-                                        <option value="2">Aves</option>
-                                        <option value="3">Suínos</option>
-                                        <option value="4">Peixes</option>
+                                        <option value="1">Carnes</option>
+                                        <option value="2">Massas</option>
+                                        <option value="3">Bebidas</option>
+                                        <option value="4">Temperos</option>
+                                        <option value="4">Cereais</option>
+                                        <option value="4">Verduras e Legumes</option>
+                                        <option value="4">Frutas</option>
                                         <option value="5">Outros</option>
                                     </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="mb-3">
+                                    <label class="form-label">ID Fornecedor</label>
+                                    <input type="text" class="form-control" name="supplier-id" placeholder="F00">
                                 </div>
                             </div>
                         </div>

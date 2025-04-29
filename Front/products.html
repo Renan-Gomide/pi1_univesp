@@ -144,7 +144,7 @@
                                     data-bs-target="#add-product-modal">
                                     <!-- Plus Icon -->
                                     <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
-                                    Adicionar produto
+                                    Adicionar Produto
                                 </a>
                                 <!-- Adicionar Mobile -->
                                 <a href="#" class="btn btn-primary d-sm-none btn-icon" data-bs-toggle="modal"
@@ -169,9 +169,11 @@
                             <table class="table table-vcenter card-table table-striped">
                                 <thead>
                                     <tr>
-                                        <th>Id</th>
+                                        <th>Id Prod.</th>
+                                        <th>Id Fornecedor</th>
                                         <th>Nome</th>
-                                        <th>Estoque (Kg)</th>
+                                        <th>Qtd. Estoque</th>
+                                        <th>Tipo Und.</th>
                                         <th>Condição</th>
                                         <th>Adicionado em</th>
                                         <th>Validade</th>
@@ -182,8 +184,10 @@
                                     <!-- Produto 1 -->
                                     <tr>
                                         <td><span class="text-muted">01</span></td>
+                                        <td><span class="text-muted">F01</span></td>
                                         <td>Contra Filé Bovino</td>
                                         <td>10</td>
+                                        <td>Kg</td>
                                         <td><span class="status-dot status-green me-1"></span> Em estoque</td>
                                         <td><span class="text-muted">02 de Fevereiro de 2025, 14:05</span></td>
                                         <td><span class="text-muted">10 de Abril de 2025</span></td>
@@ -204,11 +208,37 @@
                                     <!-- Produto 2 -->
                                     <tr>
                                         <td><span class="text-muted">02</span></td>
+                                        <td><span class="text-muted">F02</span></td>
                                         <td>Peito de Frango</td>
                                         <td>2</td>
+                                        <td>Kg</td>
                                         <td><span class="status-dot status-orange me-1"></span> Pouco estoque</td>
                                         <td><span class="text-muted">12 de Fevereiro de 2025, 15:32</span></td>
                                         <td><span class="text-muted">05 de Abril de 2025</span></td>
+                                        <td class="table-actions">
+                                            <a href="#" class="btn btn-icon btn-outline-primary"
+                                                data-bs-toggle="tooltip" title="Editar produto">
+                                                <!-- Edit Icon -->
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-edit"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" /><path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" /><path d="M16 5l3 3" /></svg>
+                                            </a>
+                                            <a href="#" class="btn btn-icon btn-outline-danger ms-1"
+                                                data-bs-toggle="tooltip" title="Excluir produto">
+                                                <!-- Delete Icon -->
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-trash"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 7l16 0" /><path d="M10 11l0 6" /><path d="M14 11l0 6" /><path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" /><path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" /></svg>
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Produto 3 -->
+                                    <tr>
+                                        <td><span class="text-muted">03</span></td>
+                                        <td><span class="text-muted">F03</span></td>
+                                        <td>Macarrão Espaguete N.2</td>
+                                        <td>0</td>
+                                        <td>Pct</td>
+                                        <td><span class="status-dot status-red me-1"></span> Sem Estoque</td>
+                                        <td><span class="text-muted">12 de Abril de 2025, 15:32</span></td>
+                                        <td><span class="text-muted">20 de Abril de 2027</span></td>
                                         <td class="table-actions">
                                             <a href="#" class="btn btn-icon btn-outline-primary"
                                                 data-bs-toggle="tooltip" title="Editar produto">
@@ -287,10 +317,30 @@
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="mb-3">
-                                    <label class="form-label">Estoque</label>
+                                    <label class="form-label">ID Fornecedor</label>
+                                    <input type="text" class="form-control" name="supplier-id" placeholder="F00">
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="mb-3">
+                                    <label class="form-label">Quantidade Estoque</label>
                                     <input type="number" min="0" class="form-control" name="product-stock" placeholder="0">
                                 </div>
                             </div>
+                            <div class="col-lg-4">
+                                <div class="mb-3">
+                                    <label class="form-label">Tipo de Unidade</label>
+                                    <select class="form-select" name="unit-type">
+                                        <option value="kg">Kg</option>
+                                        <option value="pct">Pct</option>
+                                        <option value="un">Unidade</option>
+                                        <option value="l">Litro</option>
+                                        <option value="g">Grama</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="col-lg-4">
                                 <div class="mb-3">
                                     <label class="form-label">Condição</label>
