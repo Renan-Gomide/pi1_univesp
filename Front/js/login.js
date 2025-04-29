@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Validar formulário
-    loginForm.addEventListener("submit", function (e) {
+    /*loginForm.addEventListener("submit", function (e) {
         e.preventDefault();
 
         let isValid = true;
@@ -65,10 +65,10 @@ document.addEventListener("DOMContentLoaded", function () {
             // Em um ambiente real, aqui você faria uma requisição AJAX para autenticar
             simulateLogin(emailInput.value, passwordInput.value);
         }
-    });
+    });*/
 
     // Simulação de login (em um ambiente real, isso seria uma chamada de API)
-    function simulateLogin(email, password) {
+    /*function simulateLogin(email, password) {
         // Simulando um atraso de rede
         const submitBtn = loginForm.querySelector('button[type="submit"]');
         const originalBtnText = submitBtn.innerHTML;
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 submitBtn.innerHTML = originalBtnText;
             }
         }, 1000);
-    }
+    }*/
 
     // Formulário de recuperação de senha
     const forgotPasswordForm = document.getElementById(

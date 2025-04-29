@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Elementos do formulário
     const registerForm = document.getElementById('register-form');
     const firstName = document.getElementById('first-name');
-    const lastName = document.getElementById('last-name');
     const email = document.getElementById('email');
     const password = document.getElementById('password');
     const confirmPassword = document.getElementById('confirm-password');
@@ -41,13 +40,13 @@ document.addEventListener('DOMContentLoaded', function() {
     setupPasswordToggle('confirm-password', 'toggle-confirm-password');
 
     // Validar email
-    function isValidEmail(email) {
+    /*function isValidEmail(email) {
         const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(email).toLowerCase());
-    }
+    }*/
 
     // Evento de envio do formulário
-    registerForm.addEventListener('submit', function(e) {
+    /*registerForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
         let isValid = true;
@@ -58,14 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
             isValid = false;
         } else {
             firstName.classList.remove('is-invalid');
-        }
-        
-        // Validar sobrenome
-        if (!lastName.value.trim()) {
-            lastName.classList.add('is-invalid');
-            isValid = false;
-        } else {
-            lastName.classList.remove('is-invalid');
         }
         
         // Validar email
@@ -104,10 +95,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // Simulação de envio para API
             simulateRegistration();
         }
-    });
+    });*/
     
     // Simulação de registro
-    function simulateRegistration() {
+    /*function simulateRegistration() {
         // Obter o botão de submit
         const submitBtn = registerForm.querySelector('button[type="submit"]');
         const originalBtnText = submitBtn.innerHTML;
@@ -165,5 +156,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 }, 3000);
             }
         }, 1500);
-    }
+    }*/
 });
